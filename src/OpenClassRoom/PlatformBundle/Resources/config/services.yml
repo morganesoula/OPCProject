@@ -1,0 +1,7 @@
+services:
+  oc_platform.antispam:
+    class: OpenClassRoom\PlatformBundle\Antispam\OCAntispam
+    arguments:
+      - "@mailer"
+      - "%locale%"
+      - "50"

@@ -1,0 +1,26 @@
+{# src/OpenClassRoom/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends 'OpenClassRoomPlatformBundle::layout.html.twig' %}
+
+{% block title %}
+    Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplaform_body %}
+
+    <h2>Ajouter une annonce</h2>
+
+    {{ include('OpenClassRoomPlatformBundle:Advert:form.html.twig') }}
+
+    <p>
+        Vous ajoutez une annonce. Merci de respecter les règles d'ajout.
+    </p>
+
+    <p>
+        <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'accueil
+        </a>
+    </p>
+
+{% endblock %}
