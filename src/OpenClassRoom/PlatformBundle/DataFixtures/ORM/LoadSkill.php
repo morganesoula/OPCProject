@@ -12,9 +12,7 @@ class LoadSkill implements FixtureInterface
     public function load(ObjectManager $manager)
     {
         $names = array('PHP', 'Symfony', 'C++', 'Java', 'Photoshop', 'Blender', 'Bloc-note');
-
-        foreach ($names as $name)
-        {
+        foreach ($names as $name) {
             $skill = new Skill();
             $skill->setName($name);
 

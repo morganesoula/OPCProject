@@ -5,15 +5,13 @@ namespace OpenClassRoom\PlatformBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Application
- *
  * @ORM\Table(name="oc_application")
  * @ORM\Entity(repositoryClass="OpenClassRoom\PlatformBundle\Repository\ApplicationRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Application
 {
     /**
-     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -42,17 +40,29 @@ class Application
     private $advert;
 
 
-    /**
-     * Constructor
-     */
+
     public function __construct()
     {
-        $this->date = new \DateTime();
+        $this->date = new \Datetime();
     }
 
     /**
-     * Get id.
-     *
+     * @ORM\PrePersist
+     */
+    public function increase()
+    {
+        $this->getAdvert()->increaseApplication();
+    }
+
+    /**
+     * @ORM\PreRemove
+     */
+    public function decrease()
+    {
+        $this->getAdvert()->decreaseApplication();
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -61,22 +71,14 @@ class Application
     }
 
     /**
-     * Set author.
-     *
      * @param string $author
-     *
-     * @return Application
      */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-        return $this;
     }
 
     /**
-     * Get author.
-     *
      * @return string
      */
     public function getAuthor()
@@ -85,22 +87,14 @@ class Application
     }
 
     /**
-     * Set content.
-     *
      * @param string $content
-     *
-     * @return Application
      */
     public function setContent($content)
     {
         $this->content = $content;
-
-        return $this;
     }
 
     /**
-     * Get content.
-     *
      * @return string
      */
     public function getContent()
@@ -109,23 +103,15 @@ class Application
     }
 
     /**
-     * Set date.
-     *
-     * @param \DateTime $date
-     *
-     * @return Application
+     * @param \Datetime $date
      */
-    public function setDate($date)
+    public function setDate(\Datetime $date)
     {
         $this->date = $date;
-
-        return $this;
     }
 
     /**
-     * Get date.
-     *
-     * @return \DateTime
+     * @return \Datetime
      */
     public function getDate()
     {
@@ -133,23 +119,15 @@ class Application
     }
 
     /**
-     * Set advert.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Advert $advert
-     *
-     * @return Application
+     * @param Advert $advert
      */
-    public function setAdvert(\OpenClassRoom\PlatformBundle\Entity\Advert $advert)
+    public function setAdvert(Advert $advert)
     {
         $this->advert = $advert;
-
-        return $this;
     }
 
     /**
-     * Get advert.
-     *
-     * @return \OpenClassRoom\PlatformBundle\Entity\Advert
+     * @return Advert
      */
     public function getAdvert()
     {

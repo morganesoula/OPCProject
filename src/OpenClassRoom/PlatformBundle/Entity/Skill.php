@@ -5,16 +5,12 @@ namespace OpenClassRoom\PlatformBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Skill
- *
- * @ORM\Table(name="oc_skill")
  * @ORM\Entity
+ * @ORM\Table(name="oc_skill")
  */
 class Skill
 {
     /**
-     * @var int
-     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -22,17 +18,14 @@ class Skill
     private $id;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
 
+
     /**
-     * Get id.
-     *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -40,11 +33,7 @@ class Skill
     }
 
     /**
-     * Set name.
-     *
      * @param string $name
-     *
-     * @return Skill
      */
     public function setName($name)
     {
@@ -52,8 +41,6 @@ class Skill
     }
 
     /**
-     * Get name.
-     *
      * @return string
      */
     public function getName()

@@ -33,6 +33,7 @@
         <div>
             Cette annonce requiert les compétences suivantes:
             <ul>
+                <br />
                 {% for advertSkill in listAdvertSkills %}
                 <li>{{ advertSkill.skill.name }} : niveau {{ advertSkill.level }}</li>
                 {% endfor %}

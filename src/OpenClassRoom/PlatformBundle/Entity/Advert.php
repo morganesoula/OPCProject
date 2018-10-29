@@ -4,15 +4,18 @@ namespace OpenClassRoom\PlatformBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- *
+ * @ORM\Table(name="oc_advert")
  * @ORM\Entity(repositoryClass="OpenClassRoom\PlatformBundle\Repository\AdvertRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Advert
 {
     /**
+     * @var int
+     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -43,7 +46,7 @@ class Advert
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text")
+     * @ORM\Column(name="content", type="string", length=255)
      */
     private $content;
 
@@ -73,21 +76,39 @@ class Advert
      */
     private $updatedAt;
 
-
     /**
-     * Advert constructor
+     * @ORM\Column(name="nb_applications", type="integer")
      */
+    private $nbApplications = 0;
+
+
+
     public function __construct()
     {
-        // On indique, par défaut, la date du jour pour une annonce
-        $this->date = new \DateTime();
-
-        $this->categories = new ArrayCollection();
+        $this->date         = new \Datetime();
+        $this->categories   = new ArrayCollection();
+        $this->applications = new ArrayCollection();
     }
 
     /**
-     * Get id.
-     *
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setUpdatedAt(new \Datetime());
+    }
+
+    public function increaseApplication()
+    {
+        $this->nbApplications++;
+    }
+
+    public function decreaseApplication()
+    {
+        $this->nbApplications--;
+    }
+
+    /**
      * @return int
      */
     public function getId()
@@ -96,22 +117,14 @@ class Advert
     }
 
     /**
-     * Set date.
-     *
      * @param \DateTime $date
-     *
-     * @return Advert
      */
     public function setDate($date)
     {
         $this->date = $date;
-
-        return $this;
     }
 
     /**
-     * Get date.
-     *
      * @return \DateTime
      */
     public function getDate()
@@ -120,22 +133,14 @@ class Advert
     }
 
     /**
-     * Set title.
-     *
      * @param string $title
-     *
-     * @return Advert
      */
     public function setTitle($title)
     {
         $this->title = $title;
-
-        return $this;
     }
 
     /**
-     * Get title.
-     *
      * @return string
      */
     public function getTitle()
@@ -144,22 +149,14 @@ class Advert
     }
 
     /**
-     * Set author.
-     *
      * @param string $author
-     *
-     * @return Advert
      */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-        return $this;
     }
 
     /**
-     * Get author.
-     *
      * @return string
      */
     public function getAuthor()
@@ -168,22 +165,14 @@ class Advert
     }
 
     /**
-     * Set content.
-     *
      * @param string $content
-     *
-     * @return Advert
      */
     public function setContent($content)
     {
         $this->content = $content;
-
-        return $this;
     }
 
     /**
-     * Get content.
-     *
      * @return string
      */
     public function getContent()
@@ -192,22 +181,14 @@ class Advert
     }
 
     /**
-     * Set published.
-     *
      * @param bool $published
-     *
-     * @return Advert
      */
     public function setPublished($published)
     {
         $this->published = $published;
-
-        return $this;
     }
 
     /**
-     * Get published.
-     *
      * @return bool
      */
     public function getPublished()
@@ -215,56 +196,35 @@ class Advert
         return $this->published;
     }
 
-    /**
-     * Set image.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Image|null $image
-     *
-     * @return Advert
-     */
-    public function setImage(\OpenClassRoom\PlatformBundle\Entity\Image $image = null)
+
+    public function setImage(Image $image = null)
     {
         $this->image = $image;
     }
 
-    /**
-     * Get image.
-     *
-     * @return \OpenClassRoom\PlatformBundle\Entity\Image|null
-     */
     public function getImage()
     {
         return $this->image;
     }
 
     /**
-     * Add category.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Category $category
-     *
-     * @return Advert
+     * @param Category $category
      */
-    public function addCategory(\OpenClassRoom\PlatformBundle\Entity\Category $category)
+    public function addCategory(Category $category)
     {
         $this->categories[] = $category;
     }
 
     /**
-     * Remove category.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Category $category
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @param Category $category
      */
-    public function removeCategory(\OpenClassRoom\PlatformBundle\Entity\Category $category)
+    public function removeCategory(Category $category)
     {
-        return $this->categories->removeElement($category);
+        $this->categories->removeElement($category);
     }
 
     /**
-     * Get categories.
-     *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return ArrayCollection
      */
     public function getCategories()
     {
@@ -272,35 +232,24 @@ class Advert
     }
 
     /**
-     * Add application.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Application $application
-     *
-     * @return Advert
+     * @param Application $application
      */
-    public function addApplication(\OpenClassRoom\PlatformBundle\Entity\Application $application)
+    public function addApplication(Application $application)
     {
         $this->applications[] = $application;
+        // On lie l'annonce à la candidature
         $application->setAdvert($this);
-
-        return $this;
     }
 
     /**
-     * Remove application.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Application $application
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     * @param Application $application
      */
-    public function removeApplication(\OpenClassRoom\PlatformBundle\Entity\Application $application)
+    public function removeApplication(Application $application)
     {
-        return $this->applications->removeElement($application);
+        $this->applications->removeElement($application);
     }
 
     /**
-     * Get applications.
-     *
      * @return \Doctrine\Common\Collections\Collection
      */
     public function getApplications()
@@ -309,26 +258,35 @@ class Advert
     }
 
     /**
-     * Set updatedAt.
-     *
-     * @param \DateTime|null $updatedAt
-     *
-     * @return Advert
+     * @param \DateTime $updatedAt
      */
-    public function setUpdatedAt($updatedAt = null)
+    public function setUpdatedAt(\Datetime $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
-
-        return $this;
     }
 
     /**
-     * Get updatedAt.
-     *
-     * @return \DateTime|null
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
+
+    /**
+     * @param integer $nbApplications
+     */
+    public function setNbApplications($nbApplications)
+    {
+        $this->nbApplications = $nbApplications;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNbApplications()
+    {
+        return $this->nbApplications;
+    }
+
 }

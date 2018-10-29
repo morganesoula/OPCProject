@@ -3,18 +3,13 @@
 namespace OpenClassRoom\PlatformBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
 /**
- * AdvertSkill
- *
- * @ORM\Table(name="oc_advert_skill")
  * @ORM\Entity
+ * @ORM\Table(name="oc_advert_skill")
  */
 class AdvertSkill
 {
     /**
-     * @var int
-     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -22,8 +17,6 @@ class AdvertSkill
     private $id;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="level", type="string", length=255)
      */
     private $level;
@@ -41,10 +34,9 @@ class AdvertSkill
     private $skill;
 
 
+
     /**
-     * Get id.
-     *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -52,22 +44,14 @@ class AdvertSkill
     }
 
     /**
-     * Set level.
-     *
      * @param string $level
-     *
-     * @return AdvertSkill
      */
     public function setLevel($level)
     {
         $this->level = $level;
-
-        return $this;
     }
 
     /**
-     * Get level.
-     *
      * @return string
      */
     public function getLevel()
@@ -76,23 +60,15 @@ class AdvertSkill
     }
 
     /**
-     * Set advert.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Advert $advert
-     *
-     * @return AdvertSkill
+     * @param Advert $advert
      */
-    public function setAdvert(\OpenClassRoom\PlatformBundle\Entity\Advert $advert)
+    public function setAdvert(Advert $advert)
     {
         $this->advert = $advert;
-
-        return $this;
     }
 
     /**
-     * Get advert.
-     *
-     * @return \OpenClassRoom\PlatformBundle\Entity\Advert
+     * @return Advert
      */
     public function getAdvert()
     {
@@ -100,23 +76,15 @@ class AdvertSkill
     }
 
     /**
-     * Set skill.
-     *
-     * @param \OpenClassRoom\PlatformBundle\Entity\Skill $skill
-     *
-     * @return AdvertSkill
+     * @param Skill $skill
      */
-    public function setSkill(\OpenClassRoom\PlatformBundle\Entity\Skill $skill)
+    public function setSkill(Skill $skill)
     {
         $this->skill = $skill;
-
-        return $this;
     }
 
     /**
-     * Get skill.
-     *
-     * @return \OpenClassRoom\PlatformBundle\Entity\Skill
+     * @return Skill
      */
     public function getSkill()
     {

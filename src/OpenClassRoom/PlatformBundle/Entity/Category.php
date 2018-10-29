@@ -5,6 +5,7 @@ namespace OpenClassRoom\PlatformBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="oc_category")
  * @ORM\Entity
  */
 class Category
@@ -22,9 +23,8 @@ class Category
     private $name;
 
 
+
     /**
-     * Get id.
-     *
      * @return int
      */
     public function getId()
@@ -33,11 +33,7 @@ class Category
     }
 
     /**
-     * Set name.
-     *
      * @param string $name
-     *
-     * @return Category
      */
     public function setName($name)
     {
@@ -45,8 +41,6 @@ class Category
     }
 
     /**
-     * Get name.
-     *
      * @return string
      */
     public function getName()
