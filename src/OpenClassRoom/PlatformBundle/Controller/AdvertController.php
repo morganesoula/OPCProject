@@ -6,6 +6,12 @@ namespace OpenClassRoom\PlatformBundle\Controller;
 
 use OpenClassRoom\PlatformBundle\Entity\Advert;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -76,13 +82,39 @@ class AdvertController extends Controller
 
         $advert = new Advert();
 
-        if ($request->isMethod('POST')) {
-            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
+        $formBuilder = $this
+            ->get('form.factory')
+            ->createBuilder(FormType::class, $advert)
+            ->add('date', DateType::class)
+            ->add('title', TextType::class)
+            ->add('content', TextareaType::class)
+            ->add('author', TextType::class)
+            ->add('published', CheckboxType::class, array('required' => false))
+            ->add('save', SubmitType::class);
 
-            return $this->redirectToRoute('oc_platform_view', array('id' => $advert->getId()));
+        $form = $formBuilder->getForm();
+
+        if ($request->isMethod('POST'))
+        {
+            $form->handleRequest($request);
+
+            if ($form->isValid())
+            {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($advert);
+                $em->flush();
+
+                $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée');
+
+                return $this->redirectToRoute('oc_platform_view', array(
+                    'id' => $advert->getId()
+                ));
+            }
         }
 
-        return $this->render('OpenClassRoomPlatformBundle:Advert:add.html.twig');
+        return $this->render('OpenClassRoomPlatformBundle:Advert:add.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 
 
