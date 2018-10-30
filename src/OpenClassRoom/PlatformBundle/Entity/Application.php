@@ -40,7 +40,9 @@ class Application
     private $advert;
 
 
-
+    /**
+     * Application constructor.
+     */
     public function __construct()
     {
         $this->date = new \Datetime();

@@ -4,6 +4,7 @@ namespace OpenClassRoom\PlatformBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class AdvertRepository extends EntityRepository
 {
@@ -32,6 +33,7 @@ class AdvertRepository extends EntityRepository
             ->getResult()
             ;
     }
+
     public function getAdvertWithCategories(array $categoryNames)
     {
         $qb = $this->createQueryBuilder('a');
@@ -48,6 +50,7 @@ class AdvertRepository extends EntityRepository
             ->getResult()
             ;
     }
+
     protected function whereCurrentYear(QueryBuilder $qb)
     {
         $qb
@@ -56,4 +59,25 @@ class AdvertRepository extends EntityRepository
             ->setParameter('end', new \Datetime(date('Y') . '-12-31'))   // Et le 31 décembre de cette année
         ;
     }
+
+    public function getAdverts($page, $nbPerPage)
+    {
+        $query = $this->createQueryBuilder('a')
+            ->leftJoin('a.image', 'i')
+            ->addSelect('i')
+            ->leftJoin('a.categories', 'c')
+            ->addSelect('c')
+            ->orderBy('a.date', 'DESC')
+            ->getQuery();
+
+        $query
+            ->setFirstResult(($page-1) * $nbPerPage)
+            ->setMaxResults($nbPerPage);
+
+
+
+        return new Paginator($query, true);
+    }
+
+
 }

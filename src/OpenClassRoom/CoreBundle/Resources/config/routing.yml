@@ -1,0 +1,11 @@
+# src/OpenClassRoom/OpenClassRoomCoreBundle/Resources/config/routing.yml
+
+core_home:
+  path:   /
+  defaults:
+    _controller: OpenClassRoomCoreBundle:Home:home
+
+core_contact:
+  path:   /contact
+  defaults:
+    _controller: OpenClassRoomCoreBundle:Home:contact

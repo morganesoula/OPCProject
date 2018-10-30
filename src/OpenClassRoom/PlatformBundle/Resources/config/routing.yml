@@ -9,12 +9,6 @@ oc_platform_home:
         page: \d*
 
 
-oc_platform_bye:
-    path:     /bye
-    defaults:
-        _controller: OpenClassRoomPlatformBundle:Advert:bye
-
-
 oc_platform_view:
     path:     /advert/{id}
     defaults:

@@ -1,4 +1,4 @@
-{# src/OpenClassRoom/PlatformBundle/Resources/views/Advert/index.html.twig #}
+{# src/OpenClassRoom/PlatformBundle/Resources/views/Advert/home.html.twig #}
 
 {% extends "OpenClassRoomPlatformBundle::layout.html.twig" %}
 
@@ -22,6 +22,14 @@
 
         {% else %}
             <li>Pas (encore!) d'annonces</li>
+        {% endfor %}
+    </ul>
+
+    <ul class="pagination">
+        {% for p in range(1, nbPages) %}
+            <li {% if p == page %} class="active"{% endif %}>
+                <a href="{{ path('oc_platform_home', { 'page': p}) }}">{{ p }}</a>
+            </li>
         {% endfor %}
     </ul>
 

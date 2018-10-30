@@ -1,0 +1,21 @@
+{# src/OpenClassRoom/CoreBundle/Resources/views/Home/home.html.twig #}
+
+{% extends "OpenClassRoomCoreBundle::layout.html.twig" %}
+
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+
+
+{% block body %}
+
+    {% for message in app.session.flashbag.get('info') %}
+        <div class="alert alert-warning">Message: {{ message }}</div>
+    {% endfor %}
+
+    <h2>Bienvenue sur la page d'accueil</h2>
+
+    <h4>Bonne visite!</h4>
+
+{% endblock %}
+

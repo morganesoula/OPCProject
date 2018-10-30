@@ -1,3 +1,7 @@
+core:
+    resource: "@OpenClassRoomCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 open_class_room_platform:
     resource: "@OpenClassRoomPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform

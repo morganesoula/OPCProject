@@ -298,7 +298,6 @@ class Advert
         return $this->nbApplications;
     }
 
-
     /**
      * Set slug.
      *
@@ -322,4 +321,8 @@ class Advert
     {
         return $this->slug;
     }
+
+
+
+
 }
