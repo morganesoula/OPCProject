@@ -4,6 +4,7 @@
 
 namespace OpenClassRoom\PlatformBundle\Controller;
 
+use http\Env\Response;
 use OpenClassRoom\PlatformBundle\Entity\Advert;
 use OpenClassRoom\PlatformBundle\Entity\AdvertSkill;
 use OpenClassRoom\PlatformBundle\Entity\Application;
@@ -192,5 +193,20 @@ class AdvertController extends Controller
         return $this->render('OpenClassRoomPlatformBundle:Advert:menu.html.twig', array(
             'listAdverts' => $listAdverts
         ));
+    }
+
+
+
+    public function testAction()
+    {
+        $advert = new Advert();
+        $advert->setTitle("Recherche développeur!");
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($advert);
+
+        $em->flush();
+
+        return new Response('Slug généré: ' . $advert->getSlug());
     }
 }

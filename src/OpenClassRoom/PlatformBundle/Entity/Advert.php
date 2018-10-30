@@ -81,8 +81,17 @@ class Advert
      */
     private $nbApplications = 0;
 
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     */
+    private $slug;
 
 
+
+    /**
+     * Advert constructor.
+     */
     public function __construct()
     {
         $this->date         = new \Datetime();
@@ -289,4 +298,28 @@ class Advert
         return $this->nbApplications;
     }
 
+
+    /**
+     * Set slug.
+     *
+     * @param string $slug
+     *
+     * @return Advert
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug.
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 }
