@@ -5,6 +5,8 @@
 namespace OpenClassRoom\PlatformBundle\Controller;
 
 use OpenClassRoom\PlatformBundle\Entity\Advert;
+use OpenClassRoom\PlatformBundle\Form\AdvertEditType;
+use OpenClassRoom\PlatformBundle\Form\AdvertType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -78,38 +80,21 @@ class AdvertController extends Controller
 
     public function addAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-
         $advert = new Advert();
+        $form = $this->get('form.factory')->create(AdvertType::class, $advert);
 
-        $formBuilder = $this
-            ->get('form.factory')
-            ->createBuilder(FormType::class, $advert)
-            ->add('date', DateType::class)
-            ->add('title', TextType::class)
-            ->add('content', TextareaType::class)
-            ->add('author', TextType::class)
-            ->add('published', CheckboxType::class, array('required' => false))
-            ->add('save', SubmitType::class);
-
-        $form = $formBuilder->getForm();
-
-        if ($request->isMethod('POST'))
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
-            $form->handleRequest($request);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($advert);
+            $em->flush();
 
-            if ($form->isValid())
-            {
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($advert);
-                $em->flush();
+            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée');
 
-                $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée');
+            return $this->redirectToRoute('oc_platform_view', array(
+                'id' => $advert->getId()
+            ));
 
-                return $this->redirectToRoute('oc_platform_view', array(
-                    'id' => $advert->getId()
-                ));
-            }
         }
 
         return $this->render('OpenClassRoomPlatformBundle:Advert:add.html.twig', array(
@@ -131,13 +116,22 @@ class AdvertController extends Controller
             throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
         }
 
+        $form = $this->get('form.factory')->create(AdvertEditType::class, $advert);
 
-        if ($request->isMethod('POST')) {
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid())
+        {
+            $em->flush();
+
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée.');
-            return $this->redirectToRoute('oc_platform_view', array('id' => 5));
+
+            return $this->redirectToRoute('oc_platform_view', array(
+                'id' => $advert->getId()
+            ));
         }
+
         return $this->render('OpenClassRoomPlatformBundle:Advert:edit.html.twig', array(
-            'advert' => $advert
+            'advert' => $advert,
+            'form' => $form->createView()
         ));
     }
 

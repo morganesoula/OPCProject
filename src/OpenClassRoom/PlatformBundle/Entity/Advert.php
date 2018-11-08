@@ -322,7 +322,4 @@ class Advert
         return $this->slug;
     }
 
-
-
-
 }
