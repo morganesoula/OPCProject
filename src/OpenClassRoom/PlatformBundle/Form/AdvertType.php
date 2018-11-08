@@ -33,11 +33,7 @@ class AdvertType extends AbstractType
             ->add('categories', EntityType::class, array(
                 'class' => 'OpenClassRoom\PlatformBundle\Entity\Category',
                 'choice_label' => 'name',
-                'multiple' => true,
-                'query_builder' => function(CategoryRepository $repository) use ($pattern)
-                {
-                    return $repository->getLikeQueryBuilder($pattern);
-                }
+                'multiple' => true
             ))
             ->add('save', SubmitType::class);
 
