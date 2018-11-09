@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Table(name="oc_image")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="OpenClassRoom\PlatformBundle\Entity\ImageRepository")
  * @ORM\HasLifecycleCallbacks()
  */
 class Image
