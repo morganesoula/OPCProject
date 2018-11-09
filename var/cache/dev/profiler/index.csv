@@ -1,0 +1,3 @@
+bf5d12,::1,GET,http://localhost/OPCProject/web/app_dev.php/_profiler,1541769128,,301
+6e0c91,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1541769140,0dc6a2,200
+0dc6a2,::1,GET,http://localhost/OPCProject/web/app_dev.php/platform,1541769140,,200
