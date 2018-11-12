@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 /**
  * @ORM\Table(name="oc_image")
  * @ORM\Entity(repositoryClass="OpenClassRoom\PlatformBundle\Entity\ImageRepository")
- * @ORM\HasLifecycleCallbacks()
+ * @ORM\HasLifecycleCallbacks
  */
 class Image
 {
@@ -106,7 +106,7 @@ class Image
             return;
         }
 
-        $this->url = $this->file->guessExtension();
+        $this->url = $this->file->guessClientExtension();
 
         $this->alt = $this->file->getClientOriginalName();
     }

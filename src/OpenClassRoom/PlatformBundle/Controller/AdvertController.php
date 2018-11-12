@@ -8,18 +8,16 @@ use OpenClassRoom\PlatformBundle\Entity\Advert;
 use OpenClassRoom\PlatformBundle\Form\AdvertEditType;
 use OpenClassRoom\PlatformBundle\Form\AdvertType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AdvertController extends Controller
 {
 
+    /**
+     * @param $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function indexAction($page)
     {
         if ($page < 1) {
@@ -48,7 +46,10 @@ class AdvertController extends Controller
     }
 
 
-
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function viewAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -77,7 +78,10 @@ class AdvertController extends Controller
     }
 
 
-
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function addAction(Request $request)
     {
         $advert = new Advert();
@@ -104,7 +108,11 @@ class AdvertController extends Controller
     }
 
 
-
+    /**
+     * @param $id
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function editAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -137,7 +145,10 @@ class AdvertController extends Controller
     }
 
 
-
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function deleteAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -160,7 +171,10 @@ class AdvertController extends Controller
     }
 
 
-
+    /**
+     * @param $limit
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function menuAction($limit)
     {
         $em = $this

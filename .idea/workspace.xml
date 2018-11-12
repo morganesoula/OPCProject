@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf5d10c2-d199-4b9d-bad8-20fd3e65271d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/file.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/12/5d/bf5d12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/91/0c/6e0c91" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/a2/c6/0dc6a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/24/24e4f322f53088e4d47ac898e07471dc05e4390a8dca9a46a81a97649795cef8.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/61/613a6160d6875480453ece5b523c2123d06a17e93689ef69b6e5986411117b8c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/8a/8adbfde2ab4ebb1873f1f1eb624e88f3e87193ed4d0cc1219112e2082993f9e9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/a9/a930b9d442475a6aa8248712cd7f0378c1d8d702b5b0d1542378802529aee770.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/f9/f9f85707cfe24c44d14d56acedf5bd471ae936945582bff79e91866fc173a232.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_gk6gj70alsc7vbnd1fanrrmi6h" beforeDir="false" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_gk6gj70alsc7vbnd1fanrrmi6h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,8 +107,10 @@
     <session id="2144860509">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -104,15 +118,17 @@
           <entry key="dist" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="htaccess" value="2" />
-          <entry key="php" value="3" />
-          <entry key="yml" value="8" />
+          <entry key="php" value="6" />
+          <entry key="twig" value="1" />
+          <entry key="yml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="6" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="YAML" value="8" />
+          <entry key="Twig" value="1" />
+          <entry key="YAML" value="10" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
@@ -120,11 +136,15 @@
         <counts>
           <entry key="dist" value="9" />
           <entry key="gitignore" value="100" />
+          <entry key="php" value="79" />
+          <entry key="twig" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PHP" value="79" />
           <entry key="PLAIN_TEXT" value="109" />
+          <entry key="Twig" value="39" />
         </counts>
       </usages-collector>
     </session>
@@ -146,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="391">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding>
                 <element signature="e#128#175#0#PHP" expanded="true" />
               </folding>
@@ -155,23 +175,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="79" selection-start-column="79" selection-end-column="79" />
+            <state relative-caret-position="1836">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
+              <folding>
+                <element signature="e#105#137#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-              <folding>
-                <element signature="e#105#137#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="363">
+              <caret line="86" column="6" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -189,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/bye.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/menu.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
@@ -231,15 +259,16 @@
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Form/AdvertEditType.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Form/ImageType.php" />
-        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Form/AdvertType.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Advert.php" />
-        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php" />
         <option value="$PROJECT_DIR$/src/export.sql" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" />
+        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig" />
+        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php" />
+        <option value="$PROJECT_DIR$/web/file.php" />
       </list>
     </option>
   </component>
@@ -249,7 +278,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="d9268629-8913-4a26-8859-c336f98c893e" name="127.0.0.1" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="C:/wamp/www/OPCProject" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="C:\wamp\www\OPCProject\web" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1:8080/OPCProject/web/platform" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
@@ -322,6 +361,16 @@
               <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="OPCProject" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OPCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OPCProject" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -329,11 +378,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="vali&#9;ACTION&#9;PhpValidateWebServer&#10;xdebug&#9;FILE&#9;jar://C:/Users/MSO16262/AppData/Roaming/JetBrains/PhpStorm 2018.2.5/plugins/php/lib/php.jar!/stubs/xdebug/xdebug.php&#10;xdebu&#9;ACTION&#9;XdebugAnalyzeProfilerSnapshotAction&#10;valid&#9;ACTION&#9;PhpValidateWebServer&#10;form.&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -380,17 +436,19 @@
       <workItem from="1540975076488" duration="13833000" />
       <workItem from="1541667035591" duration="10389000" />
       <workItem from="1541753099804" duration="2453000" />
-      <workItem from="1541761256255" duration="2607000" />
+      <workItem from="1541761256255" duration="12394000" />
+      <workItem from="1542013226018" duration="604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94625000" />
+    <option name="totallyTimeSpent" value="105016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15191898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,7 +462,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32900432" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -418,15 +476,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Antispam/OCAntispam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/DoctrineListener/ApplicationCreationListener.php" />
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Email/ApplicationMailer.php" />
     <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/DependencyInjection/OpenClassRoomPlatformExtension.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -597,13 +646,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/ImageRepository.php" />
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -625,16 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Advert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="58" column="100" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
-          <folding>
-            <element signature="e#55#103#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,9 +702,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -687,23 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-          <folding>
-            <element signature="e#105#137#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/export.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -711,20 +723,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="79" selection-start-column="79" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/xdebug/xdebug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Advert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="58" column="100" selection-start-line="58" selection-start-column="100" selection-end-line="58" selection-end-column="100" />
+          <folding>
+            <element signature="e#55#103#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding>
             <element signature="e#128#175#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="79" selection-start-column="79" selection-end-column="79" />
+        <state relative-caret-position="1836">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="e#105#137#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="86" column="6" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
