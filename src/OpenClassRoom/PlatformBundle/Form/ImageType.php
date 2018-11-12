@@ -16,7 +16,9 @@ class ImageType extends AbstractType
     {
         $builder
             ->add('file', FileType::class);
-    }/**
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

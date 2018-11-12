@@ -309,4 +309,15 @@ class Image extends \OpenClassRoom\PlatformBundle\Entity\Image implements \Doctr
         return parent::getUploadDir();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getWebPath()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getWebPath', []);
+
+        return parent::getWebPath();
+    }
+
 }
