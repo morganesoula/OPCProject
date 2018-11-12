@@ -39,6 +39,11 @@ class Application
      */
     private $advert;
 
+    /**
+     * @ORM\Column(name="ip", type="string", length=255)
+     */
+    private $ip;
+
 
     /**
      * Application constructor.
@@ -134,5 +139,21 @@ class Application
     public function getAdvert()
     {
         return $this->advert;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIp()
+    {
+        return $this->ip;
+    }
+
+    /**
+     * @param $ip
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
     }
 }

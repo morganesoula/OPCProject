@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Table(name="oc_image")
- * @ORM\Entity(repositoryClass="OpenClassRoom\PlatformBundle\Entity\ImageRepository")
+ * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
 class Image
@@ -31,6 +31,9 @@ class Image
      */
     private $alt;
 
+    /**
+     * @var UploadedFile
+     */
     private $file;
 
     private $tempFilename;
