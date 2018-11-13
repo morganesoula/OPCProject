@@ -75,8 +75,8 @@ class __TwigTemplate_cec2cdefc8a8322345dac8184559a3a781bfc277430ba6505b7c079f43a
         if ( !(null === $this->getAttribute((isset($context["advert"]) ? $context["advert"] : $this->getContext($context, "advert")), "image", array()))) {
             // line 12
             echo "        <img src=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : $this->getContext($context, "advert")), "image", array()), "url", array()), "html", null, true);
-            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl($this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : $this->getContext($context, "advert")), "image", array()), "webPath", array())), "html", null, true);
+            echo " alt=";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["advert"]) ? $context["advert"] : $this->getContext($context, "advert")), "image", array()), "alt", array()), "html", null, true);
             echo "\" />
     ";
@@ -304,7 +304,7 @@ class __TwigTemplate_cec2cdefc8a8322345dac8184559a3a781bfc277430ba6505b7c079f43a
 {% block ocplaform_body %}
 
     {% if advert.image is not null %}
-        <img src=\"{{ advert.image.url }}\" alt=\"{{ advert.image.alt }}\" />
+        <img src=\"{{ asset(advert.image.webPath) }} alt={{ advert.image.alt }}\" />
     {% endif %}
 
     <h2>{{ advert.title }}</h2>

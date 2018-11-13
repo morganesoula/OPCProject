@@ -62,23 +62,30 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
         // line 30
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_home");
         echo "\">Accueil</a></li>
-                    <li><a href=\"";
+                    ";
         // line 31
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_add");
-        echo "\">Ajouter une annonce</a></li>
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_AUTEUR")) {
+            // line 32
+            echo "                        <li><a href=\"";
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("oc_platform_add");
+            echo "\">Ajouter une annonce</a></li>
+                    ";
+        }
+        // line 34
+        echo "
                 </ul>
 
                 <h4>Dernières annonces</h4>
                 ";
-        // line 35
+        // line 38
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("OpenClassRoomPlatformBundle:Advert:menu", array("limit" => 3)));
         echo "
             </div>
             <div id=\"content\" class=\"col-md-9\">
                 ";
-        // line 38
+        // line 41
         $this->displayBlock('body', $context, $blocks);
-        // line 40
+        // line 43
         echo "            </div>
         </div>
 
@@ -86,16 +93,16 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
 
         <footer>
             <p>The sky's the limit ";
-        // line 46
+        // line 49
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " and beyond.</p>
         </footer>
     </div>
 
     ";
-        // line 50
+        // line 53
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 54
+        // line 57
         echo "
 
 </body>
@@ -146,7 +153,7 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
 
     }
 
-    // line 38
+    // line 41
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -155,7 +162,7 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 39
+        // line 42
         echo "                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -165,7 +172,7 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
 
     }
 
-    // line 50
+    // line 53
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -174,7 +181,7 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 51
+        // line 54
         echo "        <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
         <script src=\"//maxcdn.boostrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>
     ";
@@ -198,7 +205,7 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
 
     public function getDebugInfo()
     {
-        return array (  178 => 51,  169 => 50,  159 => 39,  150 => 38,  139 => 12,  130 => 11,  112 => 9,  99 => 54,  97 => 50,  90 => 46,  82 => 40,  80 => 38,  74 => 35,  67 => 31,  63 => 30,  45 => 14,  43 => 11,  38 => 9,  29 => 2,);
+        return array (  185 => 54,  176 => 53,  166 => 42,  157 => 41,  146 => 12,  137 => 11,  119 => 9,  106 => 57,  104 => 53,  97 => 49,  89 => 43,  87 => 41,  81 => 38,  75 => 34,  69 => 32,  67 => 31,  63 => 30,  45 => 14,  43 => 11,  38 => 9,  29 => 2,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -241,7 +248,10 @@ class __TwigTemplate_cf639a1a58bb2ef67a52065d7e96ff4b459e573c2ac4f4f4ef846a503d9
                 <h3>Les annonces</h3>
                 <ul class=\"nav nav-pills nav-stacked\">
                     <li><a href=\"{{ path('oc_platform_home') }}\">Accueil</a></li>
-                    <li><a href=\"{{ path('oc_platform_add') }}\">Ajouter une annonce</a></li>
+                    {% if is_granted('ROLE_AUTEUR') %}
+                        <li><a href=\"{{ path('oc_platform_add') }}\">Ajouter une annonce</a></li>
+                    {% endif %}
+
                 </ul>
 
                 <h4>Dernières annonces</h4>

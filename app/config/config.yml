@@ -77,3 +77,11 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
+
+fos_user:
+    db_driver:     orm
+    firewall_name: main
+    user_class:    OpenClassRoom\UserBundle\Entity\User
+    from_email:
+        address: "morganes56@gmail.com"
+        sender_name: "morgane"
