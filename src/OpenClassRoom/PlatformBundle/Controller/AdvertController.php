@@ -4,10 +4,10 @@
 
 namespace OpenClassRoom\PlatformBundle\Controller;
 
-use http\Env\Response;
 use OpenClassRoom\PlatformBundle\Entity\Advert;
 use OpenClassRoom\PlatformBundle\Form\AdvertEditType;
 use OpenClassRoom\PlatformBundle\Form\AdvertType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -82,6 +82,7 @@ class AdvertController extends Controller
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_AUTEUR')")
      */
     public function addAction(Request $request)
     {
