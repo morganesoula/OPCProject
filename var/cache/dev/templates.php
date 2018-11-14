@@ -89,6 +89,7 @@
   'OpenClassRoomPlatformBundle:Advert:form.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig',
   'OpenClassRoomPlatformBundle:Advert:index.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/Advert/index.html.twig',
   'OpenClassRoomPlatformBundle:Advert:menu.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/Advert/menu.html.twig',
+  'OpenClassRoomPlatformBundle:Advert:traduction.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/Advert/traduction.html.twig',
   'OpenClassRoomPlatformBundle:Advert:view.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig',
   'OpenClassRoomPlatformBundle::layout.html.twig' => __DIR__.'/../../../src/OpenClassRoom/PlatformBundle/Resources/views/layout.html.twig',
   'OpenClassRoomCoreBundle:Home:contact.html.twig' => __DIR__.'/../../../src/OpenClassRoom/CoreBundle/Resources/views/Home/contact.html.twig',

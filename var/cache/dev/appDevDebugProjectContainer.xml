@@ -708,7 +708,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -718,7 +718,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1317,6 +1317,7 @@
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fr.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fr.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\wamp\www\OPCProject\src\OpenClassRoom\PlatformBundle/Resources/translations\messages.fr.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
           </argument>
@@ -2084,6 +2085,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3177,12 +3186,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5bec41e1dd4d86.24600162</argument>
+      <argument>5bec4be99a9738.76929743</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5bec41e1dd4d86.24600162</argument>
+      <argument>5bec4be99a9738.76929743</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4162,7 +4171,7 @@
     <service id="oc_platform.beta.listener" class="OpenClassRoom\PlatformBundle\Beta\BetaListener">
       <tag name="kernel.event_listener" event="kernel.response" method="processBeta" priority="2"/>
       <argument type="service" id="oc_platform.beta.html_adder"/>
-      <argument>2018-11-01</argument>
+      <argument>2018-11-15</argument>
     </service>
     <service id="oc_platform.bigbrother.message_notificator" class="OpenClassRoom\PlatformBundle\BigBrother\MessageNotificator">
       <argument type="service" id="swiftmailer.mailer.default"/>
@@ -4834,7 +4843,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>VdIxeOYkoi</argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4842,7 +4851,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>GtwC3XkRQO</argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4850,7 +4859,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>kFs6Fb72QI</argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4858,7 +4867,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>ayDcYx-Nqm</argument>
       <argument>0</argument>
-      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
+      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

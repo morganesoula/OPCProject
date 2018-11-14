@@ -207,7 +207,7 @@ class AdvertController extends Controller
     }
 
 
-    public function translationAction($name)
+    public function traductionAction($name)
     {
         return $this->render('OpenClassRoomPlatformBundle:Advert:traduction.html.twig', array(
             'name' => $name

@@ -16,4 +16,4 @@ _main:
 oc_platform_translation:
     path: /traduction/{name}
     defaults:
-        _controller: OpenClassRoomPlatformBundle:Advert:translation
+        _controller: OpenClassRoomPlatformBundle:Advert:traduction
