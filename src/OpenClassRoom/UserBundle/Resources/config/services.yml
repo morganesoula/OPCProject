@@ -1,3 +1,5 @@
+# src/OpenClassRoom/UserBundle/Resources/config/services.yml
+
 services:
 #    user.example:
 #        class: OpenClassRoomUserBundle\Example

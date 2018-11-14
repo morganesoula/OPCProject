@@ -1,6 +1,6 @@
 # app/config/routing.yml
 
-core:
+oc_core:
     resource: "@OpenClassRoomCoreBundle/Resources/config/routing.yml"
     prefix:   /
 

@@ -74,7 +74,7 @@ class __TwigTemplate_6705cb084f84c204c77143793a800f71f71ed9ea7fa1af67700faa10f80
             ";
         }
         // line 32
-        echo "            
+        echo "
         </div>
 
 
@@ -274,7 +274,7 @@ class __TwigTemplate_6705cb084f84c204c77143793a800f71f71ed9ea7fa1af67700faa10f80
             {% else %}
                 <a href=\"{{ path('fos_user_security_login') }}\">Connexion</a>
             {% endif %}
-            
+
         </div>
 
 

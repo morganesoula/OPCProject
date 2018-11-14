@@ -1,6 +1,6 @@
 <?php
 
-/* @OpenClassRoomPlatform/Advert/view.html.twig */
+/* OpenClassRoomPlatformBundle:Advert:view.html.twig */
 class __TwigTemplate_b676d7c48a2c5d7d41be0deb48ea30f9255bf77301e78596cb57ed106000b1d1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_b676d7c48a2c5d7d41be0deb48ea30f9255bf77301e78596cb57ed10600
         parent::__construct($env);
 
         // line 3
-        $this->parent = $this->loadTemplate("OpenClassRoomPlatformBundle::layout.html.twig", "@OpenClassRoomPlatform/Advert/view.html.twig", 3);
+        $this->parent = $this->loadTemplate("OpenClassRoomPlatformBundle::layout.html.twig", "OpenClassRoomPlatformBundle:Advert:view.html.twig", 3);
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'ocplaform_body' => array($this, 'block_ocplaform_body'),
@@ -23,10 +23,10 @@ class __TwigTemplate_b676d7c48a2c5d7d41be0deb48ea30f9255bf77301e78596cb57ed10600
     protected function doDisplay(array $context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@OpenClassRoomPlatform/Advert/view.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OpenClassRoomPlatformBundle:Advert:view.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@OpenClassRoomPlatform/Advert/view.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OpenClassRoomPlatformBundle:Advert:view.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -270,7 +270,7 @@ class __TwigTemplate_b676d7c48a2c5d7d41be0deb48ea30f9255bf77301e78596cb57ed10600
 
     public function getTemplateName()
     {
-        return "@OpenClassRoomPlatform/Advert/view.html.twig";
+        return "OpenClassRoomPlatformBundle:Advert:view.html.twig";
     }
 
     public function isTraitable()
@@ -370,6 +370,6 @@ class __TwigTemplate_b676d7c48a2c5d7d41be0deb48ea30f9255bf77301e78596cb57ed10600
         </a>
     </p>
 
-{% endblock %}", "@OpenClassRoomPlatform/Advert/view.html.twig", "C:\\wamp\\www\\OPCProject\\src\\OpenClassRoom\\PlatformBundle\\Resources\\views\\Advert\\view.html.twig");
+{% endblock %}", "OpenClassRoomPlatformBundle:Advert:view.html.twig", "C:\\wamp\\www\\OPCProject\\src\\OpenClassRoom\\PlatformBundle\\Resources\\views\\Advert\\view.html.twig");
     }
 }

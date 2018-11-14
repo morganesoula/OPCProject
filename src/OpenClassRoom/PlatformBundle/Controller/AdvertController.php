@@ -207,4 +207,13 @@ class AdvertController extends Controller
     }
 
 
+    public function translationAction($name)
+    {
+        return $this->render('OpenClassRoomPlatformBundle:Advert:traduction.html.twig', array(
+            'name' => $name
+        ));
+
+    }
+
+
 }

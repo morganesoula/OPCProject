@@ -132,13 +132,13 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
-    <parameter key="locale">en</parameter>
+    <parameter key="locale">fr</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="kernel.http_method_override">true</parameter>
     <parameter key="kernel.trusted_hosts" type="collection"/>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="templating.helper.code.file_link_format">null</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
@@ -579,7 +579,7 @@
     <service id="locale_listener" class="Symfony\Component\HttpKernel\EventListener\LocaleListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="request_stack"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
     </service>
     <service id="validate_request_listener" class="Symfony\Component\HttpKernel\EventListener\ValidateRequestListener">
@@ -708,7 +708,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -718,7 +718,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -834,7 +834,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.61ce42ee314d3459d7339b36d3fecf2a"/>
+      <argument type="service" id="service_locator.4c41a07a05e5ddc146b79909bd1e2555"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1173,7 +1173,7 @@
     <service id="translator.default" class="Symfony\Bundle\FrameworkBundle\Translation\Translator">
       <argument type="service" id="service_locator.20ccd3ddf0f78b2202986f924e362585"/>
       <argument type="service" id="translator.selector"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="collection">
         <argument key="translation.loader.php" type="collection">
           <argument>php</argument>
@@ -1556,6 +1556,7 @@
       <call method="setFallbackLocales">
         <argument type="collection">
           <argument>fr</argument>
+          <argument>fr</argument>
         </argument>
       </call>
     </service>
@@ -1932,6 +1933,14 @@
       <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
+          <argument type="service" id="oc_platform.beta.listener"/>
+          <argument>processBeta</argument>
+        </argument>
+        <argument>2</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.response</argument>
+        <argument type="collection">
           <argument type="service" id="response_listener"/>
           <argument>onKernelResponse</argument>
         </argument>
@@ -2230,6 +2239,14 @@
         <argument type="collection">
           <argument type="service" id="sensio_framework_extra.security.listener"/>
           <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>oc_platform.post_message</argument>
+        <argument type="collection">
+          <argument type="service" id="oc_platform.bigbrother.message_listener"/>
+          <argument>processMessage</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -2550,12 +2567,6 @@
     </service>
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
       <argument type="collection">
-        <argument key="Symfony\Component\Security\Core\User\User" type="collection">
-          <argument key="class">Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder</argument>
-          <argument key="arguments" type="collection">
-            <argument>false</argument>
-          </argument>
-        </argument>
         <argument key="OpenClassRoom\UserBundle\Entity\User" type="collection">
           <argument key="algorithm">sha512</argument>
           <argument key="hash_algorithm">sha512</argument>
@@ -3061,7 +3072,7 @@
     </service>
     <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
       <argument type="service" id="security.http_utils"/>
-      <argument>fos_user_security_login</argument>
+      <argument>/platform</argument>
     </service>
     <service id="security.authentication.provider.dao.main" class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
       <argument type="service" id="fos_user.user_provider.username"/>
@@ -3166,12 +3177,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5beaf3bce0d8b9.74026984</argument>
+      <argument>5bec41e1dd4d86.24600162</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5beaf3bce0d8b9.74026984</argument>
+      <argument>5bec41e1dd4d86.24600162</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3211,7 +3222,6 @@
       <tag name="console.command"/>
       <argument type="service" id="security.encoder_factory.generic"/>
       <argument type="collection">
-        <argument>Symfony\Component\Security\Core\User\User</argument>
         <argument>OpenClassRoom\UserBundle\Entity\User</argument>
       </argument>
     </service>
@@ -3284,6 +3294,9 @@
       </call>
       <call method="addExtension">
         <argument type="service" id="doctrine.twig.doctrine_extension"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="oc_platform.twig.antispam_extension"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.dump"/>
@@ -4130,13 +4143,38 @@
     <service id="sensio_framework_extra.security.expression_language.default" class="Sensio\Bundle\FrameworkExtraBundle\Security\ExpressionLanguage" public="false"/>
     <service id="oc_platform.antispam" class="OpenClassRoom\PlatformBundle\Antispam\OCAntispam">
       <argument type="service" id="swiftmailer.mailer.default"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument>50</argument>
     </service>
     <service id="oc_platform.validator.antiflood" class="OpenClassRoom\PlatformBundle\Validator\AntifloodValidator">
       <tag name="validator.constraint_validator" alias="oc_platform_antiflood"/>
       <argument type="service" id="request_stack"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
+    <service id="oc_platform.twig.antispam_extension" class="OpenClassRoom\PlatformBundle\Twig\AntispamExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="oc_platform.antispam"/>
+    </service>
+    <service id="oc_platform.form.ckeditor" class="OpenClassRoom\PlatformBundle\Form\CkeditorType">
+      <tag name="form.type" alias="ckeditor"/>
+    </service>
+    <service id="oc_platform.beta.html_adder" class="OpenClassRoom\PlatformBundle\Beta\BetaHTMLAdder"/>
+    <service id="oc_platform.beta.listener" class="OpenClassRoom\PlatformBundle\Beta\BetaListener">
+      <tag name="kernel.event_listener" event="kernel.response" method="processBeta" priority="2"/>
+      <argument type="service" id="oc_platform.beta.html_adder"/>
+      <argument>2018-11-01</argument>
+    </service>
+    <service id="oc_platform.bigbrother.message_notificator" class="OpenClassRoom\PlatformBundle\BigBrother\MessageNotificator">
+      <argument type="service" id="swiftmailer.mailer.default"/>
+    </service>
+    <service id="oc_platform.bigbrother.message_listener" class="OpenClassRoom\PlatformBundle\BigBrother\MessageListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument>oc_platform.bigbrother.message_notificator</argument>
+      <argument type="collection">
+        <argument>alexandre</argument>
+        <argument>marine</argument>
+        <argument>pierre</argument>
+      </argument>
     </service>
     <service id="stof_doctrine_extensions.listener.sluggable" class="Gedmo\Sluggable\SluggableListener" public="false">
       <tag name="doctrine.event_subscriber" connection="default"/>
@@ -4579,7 +4617,7 @@
         <argument key="translation.loader.yml" type="service" id="translation.loader.yml"/>
       </argument>
     </service>
-    <service id="service_locator.61ce42ee314d3459d7339b36d3fecf2a" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.4c41a07a05e5ddc146b79909bd1e2555" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType" type="service" id="fos_user.change_password.form.type"/>
@@ -4587,6 +4625,7 @@
         <argument key="FOS\UserBundle\Form\Type\RegistrationFormType" type="service" id="fos_user.registration.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\ResettingFormType" type="service" id="fos_user.resetting.form.type"/>
         <argument key="FOS\UserBundle\Form\Type\UsernameFormType" type="service" id="fos_user.username_form_type"/>
+        <argument key="OpenClassRoom\PlatformBundle\Form\CkeditorType" type="service" id="oc_platform.form.ckeditor"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -4795,7 +4834,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>VdIxeOYkoi</argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4803,7 +4842,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>GtwC3XkRQO</argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4811,7 +4850,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>kFs6Fb72QI</argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4819,7 +4858,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>ayDcYx-Nqm</argument>
       <argument>0</argument>
-      <argument>6r0KIQx9BF7aXo7mXJJrq0</argument>
+      <argument>gybp0AnLAFUiaAhnhWWM6m</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
