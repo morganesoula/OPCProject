@@ -64,10 +64,10 @@ class Application extends \OpenClassRoom\PlatformBundle\Entity\Application imple
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'id', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'author', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'content', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'date', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'advert'];
+            return ['__isInitialized__', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'id', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'author', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'content', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'date', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'advert', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'ip'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'id', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'author', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'content', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'date', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'advert'];
+        return ['__isInitialized__', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'id', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'author', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'content', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'date', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'advert', '' . "\0" . 'OpenClassRoom\\PlatformBundle\\Entity\\Application' . "\0" . 'ip'];
     }
 
     /**
@@ -296,6 +296,28 @@ class Application extends \OpenClassRoom\PlatformBundle\Entity\Application imple
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAdvert', []);
 
         return parent::getAdvert();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIp()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIp', []);
+
+        return parent::getIp();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIp($ip)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIp', [$ip]);
+
+        return parent::setIp($ip);
     }
 
 }

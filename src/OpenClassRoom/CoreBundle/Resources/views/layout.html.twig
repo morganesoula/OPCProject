@@ -1,4 +1,4 @@
-{# app/Resources/views/layout.html.twig #}
+{# src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig #}
 
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>{% block title %}OC Platforme{% endblock %}</title>
+
+    {% stylesheets filter='cssrewrite, ?scssphp' 'bundles/openclassroomplatform/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
 
     {% block stylesheets %}
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />

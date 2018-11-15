@@ -54,15 +54,9 @@ class AdvertController extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      * @ParamConverter("advert", options={"mapping": {"advert_id": "id"}})
      */
-    public function viewAction(Advert $advert, $id)
+    public function viewAction(Advert $advert)
     {
         $em = $this->getDoctrine()->getManager();
-
-        $advert = $em->getRepository('OpenClassRoomPlatformBundle:Advert')->find($id);
-
-        if (null === $advert) {
-            throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
-        }
 
         $listApplications = $em
             ->getRepository('OpenClassRoomPlatformBundle:Application')

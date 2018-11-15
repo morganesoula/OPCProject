@@ -85,3 +85,12 @@ fos_user:
     from_email:
         address: "morganes56@gmail.com"
         sender_name: "morgane"
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+        jsqueeze: ~
+        scssphp:
+            formatter: 'Leafo\ScssPhp\Formatter\Compressed'

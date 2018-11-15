@@ -485,4 +485,15 @@ class Advert extends \OpenClassRoom\PlatformBundle\Entity\Advert implements \Doc
         return parent::getSlug();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function isContentValid(\Symfony\Component\Validator\Context\ExecutionContextInterface $context)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isContentValid', [$context]);
+
+        return parent::isContentValid($context);
+    }
+
 }

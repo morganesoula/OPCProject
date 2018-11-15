@@ -30,7 +30,25 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
 
-        if (0 === strpos($pathinfo, '/_')) {
+        if (0 === strpos($pathinfo, '/c')) {
+            // _assetic_fe23473
+            if ('/css/fe23473.css' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'fe23473',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_fe23473',);
+            }
+
+            // _assetic_fe23473_0
+            if ('/css/fe23473_part_1_main_1.css' === $pathinfo) {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'fe23473',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_fe23473_0',);
+            }
+
+            // core_contact
+            if ('/contact' === $pathinfo) {
+                return array (  '_controller' => 'OpenClassRoom\\CoreBundle\\Controller\\HomeController::contactAction',  '_route' => 'core_contact',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => '_wdt')), array (  '_controller' => 'web_profiler.controller.profiler:toolbarAction',));
@@ -110,11 +128,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             return array (  '_controller' => 'OpenClassRoom\\CoreBundle\\Controller\\HomeController::homeAction',  '_route' => 'core_home',);
-        }
-
-        // core_contact
-        if ('/contact' === $pathinfo) {
-            return array (  '_controller' => 'OpenClassRoom\\CoreBundle\\Controller\\HomeController::contactAction',  '_route' => 'core_contact',);
         }
 
         if (0 === strpos($pathinfo, '/login')) {
@@ -305,7 +318,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         // oc_platform_view
-        if (preg_match('#^/(?P<_locale>[^/]++)/platform/advert/(?P<advert_id>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform/advert/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_view')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::viewAction',));
         }
 

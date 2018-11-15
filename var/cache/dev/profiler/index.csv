@@ -1,11 +1,6 @@
-05bc9f,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542277965,c48d69,200
-c48d69,::1,GET,http://localhost/OPCProject/web/app_dev.php/,1542277965,,200
-bd2dcd,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542278032,ffc335,200
-ffc335,::1,GET,http://localhost/OPCProject/web/app_dev.php/fr/platform/advert/10,1542278032,,200
-ef1eb1,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542278037,927118,200
-927118,::1,GET,http://localhost/OPCProject/web/app_dev.php/fr/platform/edit/10,1542278038,,200
-4c2f9a,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542278042,87d7a8,200
-87d7a8,::1,GET,http://localhost/OPCProject/web/app_dev.php/fr/platform,1542278043,,200
-2f8821,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542278076,114af3,200
-114af3,::1,GET,http://localhost/OPCProject/web/app_dev.php/fr/platform/advert/10,1542278076,,200
-bec7c4,::1,GET,"http://localhost/OPCProject/web/app_dev.php/test/%7B%22a%22:1,%22b%22:2,%22c%22:3%7D",1542288513,,200
+6a3f08,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542296140,e6dccc,200
+e6dccc,::1,GET,http://localhost/OPCProject/web/app_dev.php/login,1542296140,,200
+c3f8dc,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542296669,535af9,200
+535af9,::1,GET,http://localhost/OPCProject/web/app_dev.php/login,1542296669,,200
+014729,::1,GET,http://localhost/OPCProject/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Dfr%26_controller%3DOpenClassRoomPlatformBundle%253AAdvert%253Amenu,1542296687,97c708,200
+97c708,::1,GET,http://localhost/OPCProject/web/app_dev.php/login,1542296687,,200
