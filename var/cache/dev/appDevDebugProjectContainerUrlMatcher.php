@@ -117,35 +117,43 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'OpenClassRoom\\CoreBundle\\Controller\\HomeController::contactAction',  '_route' => 'core_contact',);
         }
 
-        if (0 === strpos($pathinfo, '/platform')) {
-            // oc_platform_home
-            if (preg_match('#^/platform(?:/(?P<page>\\d*))?$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_home')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::indexAction',  'page' => 1,));
-            }
+        if (0 === strpos($pathinfo, '/login')) {
+            // fos_user_security_login
+            if ('/login' === $pathinfo) {
+                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                    $allow = array_merge($allow, array('GET', 'POST'));
+                    goto not_fos_user_security_login;
+                }
 
-            // oc_platform_view
-            if (0 === strpos($pathinfo, '/platform/advert') && preg_match('#^/platform/advert/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_view')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::viewAction',));
+                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
             }
+            not_fos_user_security_login:
 
-            // oc_platform_add
-            if ('/platform/add' === $pathinfo) {
-                return array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::addAction',  '_route' => 'oc_platform_add',);
-            }
+            // fos_user_security_check
+            if ('/login_check' === $pathinfo) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_fos_user_security_check;
+                }
 
-            // oc_platform_edit
-            if (0 === strpos($pathinfo, '/platform/edit') && preg_match('#^/platform/edit/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_edit')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::editAction',));
+                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
             }
-
-            // oc_platform_delete
-            if (0 === strpos($pathinfo, '/platform/delete') && preg_match('#^/platform/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_delete')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::deleteAction',));
-            }
+            not_fos_user_security_check:
 
         }
 
-        elseif (0 === strpos($pathinfo, '/profile')) {
+        // fos_user_security_logout
+        if ('/logout' === $pathinfo) {
+            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
+                $allow = array_merge($allow, array('GET', 'POST'));
+                goto not_fos_user_security_logout;
+            }
+
+            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
+        }
+        not_fos_user_security_logout:
+
+        if (0 === strpos($pathinfo, '/profile')) {
             // fos_user_profile_show
             if ('/profile' === $trimmedPathinfo) {
                 if ('GET' !== $canonicalMethod) {
@@ -185,43 +193,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/login')) {
-            // fos_user_security_login
-            if ('/login' === $pathinfo) {
-                if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                    $allow = array_merge($allow, array('GET', 'POST'));
-                    goto not_fos_user_security_login;
-                }
-
-                return array (  '_controller' => 'fos_user.security.controller:loginAction',  '_route' => 'fos_user_security_login',);
-            }
-            not_fos_user_security_login:
-
-            // fos_user_security_check
-            if ('/login_check' === $pathinfo) {
-                if ('POST' !== $canonicalMethod) {
-                    $allow[] = 'POST';
-                    goto not_fos_user_security_check;
-                }
-
-                return array (  '_controller' => 'fos_user.security.controller:checkAction',  '_route' => 'fos_user_security_check',);
-            }
-            not_fos_user_security_check:
-
-        }
-
-        // fos_user_security_logout
-        if ('/logout' === $pathinfo) {
-            if (!in_array($canonicalMethod, array('GET', 'POST'))) {
-                $allow = array_merge($allow, array('GET', 'POST'));
-                goto not_fos_user_security_logout;
-            }
-
-            return array (  '_controller' => 'fos_user.security.controller:logoutAction',  '_route' => 'fos_user_security_logout',);
-        }
-        not_fos_user_security_logout:
-
-        if (0 === strpos($pathinfo, '/register')) {
+        elseif (0 === strpos($pathinfo, '/register')) {
             // fos_user_registration_register
             if ('/register' === $trimmedPathinfo) {
                 if (!in_array($canonicalMethod, array('GET', 'POST'))) {
@@ -322,8 +294,38 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // oc_platform_paramconverter
+        if (0 === strpos($pathinfo, '/test') && preg_match('#^/test/(?P<json>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_paramconverter')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::ParamConverterAction',));
+        }
+
+        // oc_platform_home
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform(?:/(?P<page>\\d*))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_home')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::indexAction',  'page' => 1,));
+        }
+
+        // oc_platform_view
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform/advert/(?P<advert_id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_view')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::viewAction',));
+        }
+
+        // oc_platform_add
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform/add$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_add')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::addAction',));
+        }
+
+        // oc_platform_edit
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform/edit/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_edit')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::editAction',));
+        }
+
+        // oc_platform_delete
+        if (preg_match('#^/(?P<_locale>[^/]++)/platform/delete/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_delete')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::deleteAction',));
+        }
+
         // oc_platform_translation
-        if (0 === strpos($pathinfo, '/traduction') && preg_match('#^/traduction/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+        if (preg_match('#^/(?P<_locale>[^/]++)/traduction/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_translation')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::traductionAction',));
         }
 

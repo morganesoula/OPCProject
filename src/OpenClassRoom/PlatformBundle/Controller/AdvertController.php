@@ -4,9 +4,11 @@
 
 namespace OpenClassRoom\PlatformBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Response;
 use OpenClassRoom\PlatformBundle\Entity\Advert;
 use OpenClassRoom\PlatformBundle\Form\AdvertEditType;
 use OpenClassRoom\PlatformBundle\Form\AdvertType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -50,8 +52,9 @@ class AdvertController extends Controller
     /**
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
+     * @ParamConverter("advert", options={"mapping": {"advert_id": "id"}})
      */
-    public function viewAction($id)
+    public function viewAction(Advert $advert, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -213,6 +216,14 @@ class AdvertController extends Controller
             'name' => $name
         ));
 
+    }
+
+    /**
+     * @ParamConverter("json")
+     */
+    public function ParamConverterAction($json)
+    {
+        return new Response(print_r($json, true));
     }
 
 

@@ -708,7 +708,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -718,7 +718,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -1265,6 +1265,7 @@
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.de.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.de.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\wamp\www\OPCProject\src\OpenClassRoom\PlatformBundle/Resources/translations\messages.de.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
           </argument>
@@ -1279,6 +1280,7 @@
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.en.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.en.xlf</argument>
             <argument>C:\wamp\www\OPCProject\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\wamp\www\OPCProject\src\OpenClassRoom\PlatformBundle/Resources/translations\messages.en.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
             <argument>C:\wamp\www\OPCProject\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
           </argument>
@@ -2085,14 +2087,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3186,12 +3180,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5bec4be99a9738.76929743</argument>
+      <argument>5bed7402b1b930.31049395</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5bec4be99a9738.76929743</argument>
+      <argument>5bed7402b1b930.31049395</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4125,6 +4119,11 @@
         <argument>0</argument>
         <argument>datetime</argument>
       </call>
+      <call method="add">
+        <argument type="service" id="oc_platform.paramconverter.json"/>
+        <argument>0</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="sensio_framework_extra.converter.doctrine.orm" class="Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter">
       <tag name="request.param_converter" converter="doctrine.orm"/>
@@ -4184,6 +4183,9 @@
         <argument>marine</argument>
         <argument>pierre</argument>
       </argument>
+    </service>
+    <service id="oc_platform.paramconverter.json" class="OpenClassRoom\PlatformBundle\ParamConverter\JsonParamConverter">
+      <tag name="request.param_converter"/>
     </service>
     <service id="stof_doctrine_extensions.listener.sluggable" class="Gedmo\Sluggable\SluggableListener" public="false">
       <tag name="doctrine.event_subscriber" connection="default"/>
@@ -4843,7 +4845,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>VdIxeOYkoi</argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4851,7 +4853,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>GtwC3XkRQO</argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4859,7 +4861,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>kFs6Fb72QI</argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4867,7 +4869,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>ayDcYx-Nqm</argument>
       <argument>0</argument>
-      <argument>M-NMcTbbY4ABjJOhqmAaoL</argument>
+      <argument>Din8puu-Q-4eRXdzzFRwVh</argument>
       <argument>C:\wamp\www\OPCProject\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
