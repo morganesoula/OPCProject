@@ -342,6 +342,31 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_translation')), array (  '_controller' => 'OpenClassRoom\\PlatformBundle\\Controller\\AdvertController::traductionAction',));
         }
 
+        if (0 === strpos($pathinfo, '/_console')) {
+            // console
+            if ('/_console' === $pathinfo) {
+                if ('GET' !== $canonicalMethod) {
+                    $allow[] = 'GET';
+                    goto not_console;
+                }
+
+                return array (  '_controller' => 'coresphere_console.controller:consoleAction',  '_route' => 'console',);
+            }
+            not_console:
+
+            // console_exec
+            if (0 === strpos($pathinfo, '/_console/commands') && preg_match('#^/_console/commands(?:\\.(?P<_format>json))?$#s', $pathinfo, $matches)) {
+                if ('POST' !== $canonicalMethod) {
+                    $allow[] = 'POST';
+                    goto not_console_exec;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'console_exec')), array (  '_controller' => 'coresphere_console.controller:execAction',  '_format' => 'json',));
+            }
+            not_console_exec:
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

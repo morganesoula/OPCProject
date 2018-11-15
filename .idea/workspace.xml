@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf5d10c2-d199-4b9d-bad8-20fd3e65271d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Symfony.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/annotations.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterDir="false" />
@@ -25,52 +18,9 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/2/K/Z6u6OmsvgJwc7ebtEOgh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/G/X/yZNbBRIFFz8iml0QPV-9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/J/2/kS0KKoNDGN-JrVNBsv6r" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/S/U/6o6dzHtlv4XY2uRmc8-E" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/V/M/I4YHK9JMxDcK9X3ajugA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/GtwC3XkRQO/X/K/rEJ4r9WOezFcAoiYdRLC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/1/K/P26K1ErjqYiX5lnAYulI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/2/H/BwNAtuitNag9QPrFGpWv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/7/U/dnj5NnXU2CMDRqM-QSBw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/B/L/n7wBdnOZiIh2KacTmAhd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/C/L/FJDQoQixRa2UOd85eQi0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/E/M/jezwEE2iof5YkxrnnZTr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/F/C/4O5pkez+GSYm6jrJx3Eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/F/S/4-UnG0ajkwCx0hFojIJh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/G/2/m-KM+QauOjrGhFPJGdwe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/H/Z/hJKYhXiECOrdt3b8siDP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/K/A/2Hy6it1cTFBh1Y3VPxS6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/K/M/ER61nSCXz4cLIm5rEPVx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/K/S/LSj3IpgnLsrrMcVyXCBV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/M/0/Jyqtfhs6oogzuoj2GJfb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/M/I/zjla3OFqQhp8OJ1x+3TX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/M/J/Jt+EFayXQTrMfp9aRoMP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/N/C/CmJ-kXCmAUlu2zb625OS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/P/Q/etTcvPFLTNnZd+lbIFE3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/R/I/vboM+S1Ca7BDNQB-YZPy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/S/4/2XV0xZdBe5bivJgPbtBo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/T/L/Ei-8RxlHItAAFDaaouX1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/U/W/GngNi2x3taTyIDzhlLNd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/V/Y/1xVkf+cQoKr4qrbeImxY" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/W/L/v+2zMHmrZE1aKZ7NfCse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/X/5/ZwzJ+r8eofST12+uauyS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ayDcYx-Nqm/X/T/c4fX4m31N3M+UL8qa2Ua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/templates.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/validation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlGenerator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlGenerator.php.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/appProdProjectContainerUrlMatcher.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/classes.map" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/classes.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/classes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityAdvert.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityAdvert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/prod/doctrine/orm/Proxies/__CG__OpenClassRoomPlatformBundleEntityImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/prod.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/prod.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_6b8kqdde4gn37dpiagfd0o62e3" beforeDir="false" afterPath="$PROJECT_DIR$/var/sessions/dev/sess_6b8kqdde4gn37dpiagfd0o62e3" afterDir="false" />
@@ -176,21 +126,21 @@
           <entry key="dist" value="2" />
           <entry key="gitignore" value="2" />
           <entry key="htaccess" value="2" />
-          <entry key="json" value="3" />
-          <entry key="php" value="52" />
+          <entry key="json" value="4" />
+          <entry key="php" value="55" />
           <entry key="twig" value="23" />
           <entry key="xlf" value="1" />
-          <entry key="yml" value="43" />
+          <entry key="yml" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JSON" value="3" />
-          <entry key="PHP" value="51" />
+          <entry key="JSON" value="4" />
+          <entry key="PHP" value="54" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Twig" value="23" />
-          <entry key="YAML" value="43" />
+          <entry key="YAML" value="44" />
           <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
@@ -200,21 +150,21 @@
           <entry key="dist" value="34" />
           <entry key="dummy" value="17" />
           <entry key="gitignore" value="111" />
-          <entry key="json" value="133" />
-          <entry key="php" value="7618" />
+          <entry key="json" value="176" />
+          <entry key="php" value="7677" />
           <entry key="twig" value="2629" />
           <entry key="xlf" value="409" />
-          <entry key="yml" value="4286" />
+          <entry key="yml" value="4326" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="33" />
-          <entry key="JSON" value="133" />
-          <entry key="PHP" value="7489" />
+          <entry key="JSON" value="176" />
+          <entry key="PHP" value="7548" />
           <entry key="PLAIN_TEXT" value="700" />
           <entry key="Twig" value="2629" />
-          <entry key="YAML" value="4286" />
+          <entry key="YAML" value="4326" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -244,11 +194,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Command/ListCommand.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -274,7 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Form/AdvertEditType.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Form/ImageType.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/delete.html.twig" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig" />
@@ -310,7 +300,6 @@
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/traduction.html.twig" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/translations/messages.fr.xlf" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/translations/messages.de.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/translations/messages.fr.yml" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/translations/messages.en.yml" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml" />
@@ -318,13 +307,15 @@
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/public/css/main.css" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
+        <option value="$PROJECT_DIR$/web/app.php" />
       </list>
     </option>
   </component>
@@ -403,6 +394,7 @@
       <path value="$PROJECT_DIR$/vendor/patchwork/jsqueeze" />
       <path value="$PROJECT_DIR$/vendor/leafo/scssphp" />
       <path value="$PROJECT_DIR$/vendor/symfony/assetic-bundle" />
+      <path value="$PROJECT_DIR$/vendor/coresphere/console-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -431,12 +423,6 @@
               <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="OPCProject" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OPCProject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OPCProject" type="b2602c69:ProjectViewProjectNode" />
@@ -480,7 +466,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="layou&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig&#10;config&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/config.yml&#10;routing&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/routing.yml&#10;Ad&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;menu&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/menu.html.twig&#10;layout&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig&#10;advert&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;services&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;advertContr&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;routi&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing.yml&#10;rou&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing_dev.yml&#10;tradu&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/traduction.html.twig&#10;advertCon&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;BetaLis&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Beta/BetaListener.php&#10;serv&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;servi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;betaLi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Beta/BetaListener.php&#10;OCAn&#9;null&#9;null&#10;AdvertTy&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Form/AdvertType.php&#10;Advertcontro&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;login&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle/Resources/views/Security/login.html.twig&#10;Securi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle/Controller/SecurityController.php&#10;securi&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/security.yml&#10;routing.&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing.yml&#10;secur&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/security.yml&#10;UserBundle&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle&#10;parameters&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/parameters.yml.dist&#10;config.&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/config.yml&#10;AppKer&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/AppKernel.php&#10;home&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/Home/home.html.twig&#10;.html&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig&#10;Adve&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;delete.&#9;FILE&#9;file://C:/wamp/www/OPCProject/vendor/sensio/generator-bundle/Resources/skeleton/crud/actions/delete.php.twig&#10;view&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig&#10;vali&#9;ACTION&#9;PhpValidateWebServer&#10;xdebug&#9;FILE&#9;jar://C:/Users/MSO16262/AppData/Roaming/JetBrains/PhpStorm 2018.2.5/plugins/php/lib/php.jar!/stubs/xdebug/xdebug.php&#10;xdebu&#9;ACTION&#9;XdebugAnalyzeProfilerSnapshotAction&#10;valid&#9;ACTION&#9;PhpValidateWebServer&#10;form.&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig" />
+    <property name="SearchEverywhereHistoryKey" value="app.php&#9;FILE&#9;file://C:/wamp/www/OPCProject/web/app.php&#10;routing_dev&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing_dev.yml&#10;Kern&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/AppKernel.php&#10;composer&#9;FILE&#9;file://C:/wamp/www/OPCProject/composer.json&#10;ListComm&#9;FILE&#9;file://C:/wamp/www/OPCProject/vendor/symfony/symfony/src/Symfony/Component/Console/Command/ListCommand.php&#10;layou&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig&#10;config&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/config.yml&#10;routing&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/routing.yml&#10;Ad&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;menu&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/menu.html.twig&#10;layout&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/layout.html.twig&#10;advert&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;services&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;advertContr&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;routi&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing.yml&#10;rou&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing_dev.yml&#10;tradu&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/traduction.html.twig&#10;advertCon&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;BetaLis&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Beta/BetaListener.php&#10;serv&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;servi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/config/services.yml&#10;betaLi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Beta/BetaListener.php&#10;OCAn&#9;null&#9;null&#10;AdvertTy&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Form/AdvertType.php&#10;Advertcontro&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;login&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle/Resources/views/Security/login.html.twig&#10;Securi&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle/Controller/SecurityController.php&#10;securi&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/security.yml&#10;routing.&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/routing.yml&#10;secur&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/security.yml&#10;UserBundle&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/UserBundle&#10;parameters&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/parameters.yml.dist&#10;config.&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/config/config.yml&#10;AppKer&#9;FILE&#9;file://C:/wamp/www/OPCProject/app/AppKernel.php&#10;home&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/CoreBundle/Resources/views/Home/home.html.twig&#10;.html&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig&#10;Adve&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Controller/AdvertController.php&#10;delete.&#9;FILE&#9;file://C:/wamp/www/OPCProject/vendor/sensio/generator-bundle/Resources/skeleton/crud/actions/delete.php.twig&#10;view&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/view.html.twig&#10;vali&#9;ACTION&#9;PhpValidateWebServer&#10;xdebug&#9;FILE&#9;jar://C:/Users/MSO16262/AppData/Roaming/JetBrains/PhpStorm 2018.2.5/plugins/php/lib/php.jar!/stubs/xdebug/xdebug.php&#10;xdebu&#9;ACTION&#9;XdebugAnalyzeProfilerSnapshotAction&#10;valid&#9;ACTION&#9;PhpValidateWebServer&#10;form.&#9;FILE&#9;file://C:/wamp/www/OPCProject/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/form.html.twig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -546,16 +532,15 @@
       <workItem from="1542020342764" duration="11709000" />
       <workItem from="1542098795377" duration="19877000" />
       <workItem from="1542184261591" duration="20461000" />
-      <workItem from="1542271263813" duration="11002000" />
+      <workItem from="1542271263813" duration="13103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173186000" />
+    <option name="totallyTimeSpent" value="175287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -585,23 +570,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Entity/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="e#105#137#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Validator/AntifloodValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -855,20 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenClassRoom/PlatformBundle/Resources/views/Advert/menu.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -886,13 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -917,6 +864,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Console/Command/ListCommand.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="42" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>
